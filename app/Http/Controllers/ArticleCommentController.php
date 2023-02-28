@@ -13,6 +13,7 @@ class ArticleCommentController extends Controller
     
     public function store(Request $request, $article_slug)
     {
+        // Validasi
         $validator = Validator::make($request->all(), [
             'body' => 'required|string|max:255',
         ]);
